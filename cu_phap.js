@@ -98,3 +98,50 @@ while (the !== 0) {
   }
 
   console.log("Tich la", p);
+
+
+
+//   bài 46
+var r= 1246789;
+var sochu = 0;
+var mng= r;
+
+if(r === 0) {
+    sochu = 1;
+}
+
+for (; mng !== 0; mng = Math.floor(mng / 10)) {
+    if (mng % 2 === 1) {
+        sochu = sochu + 1;
+    }
+}
+
+console.log("số chữ số lẻ của", r, "là", sochu)
+
+// bài 47
+var ru = 1234567;
+var chuso = 0;
+var thema = ru;
+var x = 0;
+
+for (; thema !== 0; thema = Math.floor(thema / 10)) {
+    if (thema % 2 === 0) {
+        x = x + thema % 10;
+    }
+}
+
+console.log("tổng các chữ số chẵn của", ru, "là", x)
+
+// bài 48
+var xu= 1234567;
+var sochus = 0;
+var theman = xu;
+var p = 1;
+
+for (; theman !== 0; theman = Math.floor(theman / 10)){
+    if (theman % 2 === 1) {
+        p = p * (theman % 10);
+    }
+}
+
+console.log("tích các chữ số lẻ của", xu, "là", p)
