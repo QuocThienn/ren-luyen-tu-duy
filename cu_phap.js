@@ -145,3 +145,53 @@ for (; theman !== 0; theman = Math.floor(theman / 10)){
 }
 
 console.log("tích các chữ số lẻ của", xu, "là", p)
+
+// bài 49
+
+var op = 32765;
+var he = op;
+var i;
+for (i = he; i >= 10; i /= 10);
+
+var roundedValue = Math.round(i);
+
+console.log("chữ số đầu tiên là", roundedValue)
+
+// bài 50
+
+var v = 1345678;
+var songhich = 0;
+
+for(; v !== 0; v = Math.floor(v / 10)) {
+    songhich = songhich * 10 + (v % 10);
+}
+
+console.log("số đảo ngược là", songhich);
+
+// bài 51
+
+var rt = 1239870;
+var m = 0;
+
+for (; rt !== 0; rt = Math.floor(rt / 10)) {
+    var u = rt % 10;
+    if (u > m) {
+        m = u
+    }
+}
+
+console.log("chứx số lớn nhất:", m);
+
+// bài 52
+
+var qt = 653490;
+var mi = qt % 10;
+
+for (; qt !== 0; qt = Math.floor(qt / 10)) {
+    var iu = qt % 10;
+    if (iu < mi) {
+        mi = iu;
+    }
+}
+
+console.log ("chữ số nhỏ nhất:", mi)
