@@ -241,3 +241,38 @@ for (;tu !== 0; tu = Math.floor(tu / 10)) {
 }
 
 console.log("số nhỏ nhất là", nhỏ, "số lượng chữ số nhỏ nhất", đê)
+
+// bài 56
+
+var qw = 565;
+console.log(qw , "có gồm toàn số lẻ hay không?");
+
+var kt = true;
+for (; qw !== 0; qw = Math.floor(qw / 10)) {
+    if ((qw % 10) % 2 === 0) {
+        kt = false;
+    }
+}
+
+if (kt === true) {
+    console.log("đúng");
+}else {
+    console.log("sai");
+}
+
+// bài 57
+var w = 665;
+console.log(w, "gồm toàn số chẳng?");
+var tr = true;
+
+for (; w !== 0; w = Math.floor(w / 10)) {
+    if ((w % 10) % 2 === 1) {
+        tr = false;
+    }
+}
+
+if (tr === true) {
+    console.log("đúng");
+}else {
+    console.log("sai");
+}
