@@ -195,3 +195,49 @@ for (; qt !== 0; qt = Math.floor(qt / 10)) {
 }
 
 console.log ("chữ số nhỏ nhất:", mi)
+
+// bài 53
+
+var ar = 9378943;
+var lớn = 0;
+var đếm = 1;
+
+if (ar === 0) {
+    đếm = 1;
+}
+
+for (; ar !== 0; ar = Math.floor(ar / 10)) {
+    var ui = ar % 10;
+    if (ui === lớn) {
+        đếm++;
+    }
+    if (ui > lớn ) {
+        lớn = ui;
+        đếm = 1;
+    }
+}
+
+console.log("số lớn nhất là", lớn,"Số lượng chữ số lớn nhất là: ", đếm);
+
+// bài 54
+
+var tu = 19876172;
+var nhỏ = tu % 10;
+var đê = 0;
+
+if (tu === 0) {
+    nhỏ = 0;
+}
+
+for (;tu !== 0; tu = Math.floor(tu / 10)) {
+    var qi = tu % 10;
+    if (qi === nhỏ) {
+        đê++;
+    }
+    if(qi < nhỏ) {
+        nhỏ = qi;
+        đê = 1;
+    }
+}
+
+console.log("số nhỏ nhất là", nhỏ, "số lượng chữ số nhỏ nhất", đê)
