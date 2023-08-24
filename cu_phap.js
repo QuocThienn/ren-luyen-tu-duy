@@ -276,3 +276,46 @@ if (tr === true) {
 }else {
     console.log("sai");
 }
+
+// bài 59
+ var tu = 7557;
+ var hê = Math.floor(Math.log10(tu)) + 1;
+ var hu = 0;
+ var hi = tu;
+
+ console.log(tu , "có phải số đối xứng không?");
+ for (; hi !== 0; hi = Math.floor(hi / 10)) {
+    var hí = hi % 10;
+    hu += hí * Math.pow(10, --hê);
+ }
+
+ if (hu === tu) {
+    console.log("đúng")
+ } else {
+    console.log("sai")
+ }
+
+//  bài 60
+
+var ty = 123456;
+var chck = true;
+var tp = ty;
+var eh = tp % 10;
+tp = Math.floor(tp / 10);
+
+console.log(ty , "có tăng dần từ trái sang phải?");
+
+for (; tp !== 0; tp = Math.floor(tp / 10)) {
+    var n = tp % 10;
+    if (eh < n) {
+        chck = false;
+    } else {
+        eh = n;
+    }
+}
+
+if (chck ) {
+    console.log("đúng")
+} else {
+    console.log('sai')
+}
