@@ -1,12 +1,12 @@
-// các biến
-var a= 10; //number
-var b= "ehe" //string
-var c = true; //boolean
-var d = false; //boolean
-var r = null; //null
-var e //Undefined
-var w =[1,2,3,4,] //array
-var q = Symbol(4); //symboll
+// // các biến
+// var a= 10; //number
+// var b= "ehe" //string
+// var c = true; //boolean
+// var d = false; //boolean
+// var r = null; //null
+// var e //Undefined
+// var w =[1,2,3,4,] //array
+// var q = Symbol(4); //symboll
 
 // câu điều kiện
 var age =18
@@ -295,12 +295,12 @@ if (tr === true) {
     console.log("sai")
  }
 
-//  bài 60
+//  bài 60 + 61
 
-var ty = 123456;
-var chck = true;
-var tp = ty;
-var eh = tp % 10;
+var ty = 654321;
+var chck = oi = true;
+var tp = de = ty;
+var eh = ou = tp % 10;
 tp = Math.floor(tp / 10);
 
 console.log(ty , "có tăng dần từ trái sang phải?");
@@ -319,3 +319,78 @@ if (chck ) {
 } else {
     console.log('sai')
 }
+
+
+console.log(ty , "có giảm dần từ trái sang phải?");
+
+
+for (; de !== 0; de = Math.floor(de / 10)) {
+    var as = de % 10;
+    if (as < ou) {
+        oi = false;
+    }else {
+        ou = as;
+    }
+}
+
+if (oi ) {
+    console.log("đúng");
+}else {
+    console.log("sai");
+}
+
+// bài 62 + 63
+
+var a = 12;
+var b = 6;
+var i;
+var y;
+
+var max = a > b ? a : b;
+var min = a < b ? a : b;
+
+for (i = min; i >= 1; i--) {
+    if(max % i === 0 && min % i === 0){
+        console.log("ước chung lớn =", i);
+        break;
+    }
+}
+
+if (a === b) {
+    console.log("giá trị của a là =", a);
+} else {
+    for (y = max; y < a * b; y++) {
+        if (y % a === 0 && y % b === 0) {
+            console.log("Bội chung nhỏ nhất", y);
+            break;
+        }
+    }
+}
+
+// bài 64
+
+var xi = 2;
+var xy = 5;
+
+var xiy = - xy / xi;
+console.log("nghiệm là:", xiy)
+
+// bài 65
+
+var xe = 2;
+var xr = -7;
+var xt = 3;
+
+var tisnh = xr * xr - 4 * xe * xt;
+
+if (tisnh > 0) {
+    var x1 = (- xr + Math.sqrt(tisnh)) / (2 * xe);
+    var x2 = (- xr - Math.sqrt(tisnh)) / (2 * xe);
+    console.log("Nghiệm: x1 = ", x1, ", x2 = ", x2);
+}else if (tisnh === 0) {
+    var zx = -xr / (2 * xe);
+    console.log("Phương trình có nghiệm kép: x = ", zx);
+  } else {
+    console.log("Phương trình không có nghiệm thực.");
+  }
+
