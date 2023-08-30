@@ -207,12 +207,12 @@ if (ar === 0) {
 }
 
 for (; ar !== 0; ar = Math.floor(ar / 10)) {
-    var ui = ar % 10;
-    if (ui === lớn) {
+    var úi = ar % 10;
+    if (úi === lớn) {
         đếm++;
     }
-    if (ui > lớn ) {
-        lớn = ui;
+    if (úi > lớn ) {
+        lớn = úi;
         đếm = 1;
     }
 }
@@ -278,18 +278,18 @@ if (tr === true) {
 }
 
 // bài 59
- var tu = 7557;
- var hê = Math.floor(Math.log10(tu)) + 1;
+ var tuw = 7557;
+ var hê = Math.floor(Math.log10(tuw)) + 1;
  var hu = 0;
- var hi = tu;
+ var hi = tuw;
 
- console.log(tu , "có phải số đối xứng không?");
+ console.log(tuw , "có phải số đối xứng không?");
  for (; hi !== 0; hi = Math.floor(hi / 10)) {
     var hí = hi % 10;
     hu += hí * Math.pow(10, --hê);
  }
 
- if (hu === tu) {
+ if (hu === tuw) {
     console.log("đúng")
  } else {
     console.log("sai")
@@ -394,3 +394,41 @@ if (tisnh > 0) {
     console.log("Phương trình không có nghiệm thực.");
   }
 
+// bài 67
+var su = 0;
+var tu = 1;
+var xu = 1;
+var nu = 2;
+
+xu = - xu;  
+
+for (var iu = 1; iu <= nu; iu++) {
+    tu = tu * xu;
+    su = su + tu;
+}
+
+console.log("Tổng =", -su );
+
+// bài 68
+var tq = 1;
+var sq = 0;
+var xq = 6;
+var nq = 4;
+var iq;
+var yq = 1;
+var uq = 0;
+
+for (iq = 1; iq <= nq; iq++) {
+    tq = Math.pow(xq, 2 * iq) * Math.pow(-1, iq);
+    sq = tq + sq;
+}
+
+for (iq = 0; iq < nq; iq++) {
+    yq = Math.pow(xq, 2 * iq + 1) * Math.pow(-1, i);
+    uq = uq + yq;
+}
+
+console.log("Tong la", uq);
+
+
+console.log("Tổng là", sq);
