@@ -409,7 +409,7 @@ for (var iu = 1; iu <= nu; iu++) {
 
 console.log("Tổng =", -su );
 
-// bài 68
+// bài 68 + 69;
 var tq = 1;
 var sq = 0;
 var xq = 6;
@@ -432,3 +432,116 @@ console.log("Tong la", uq);
 
 
 console.log("Tổng là", sq);
+
+// bài 70 
+var st = 0;
+var pt = 0;
+var nt = 4;
+var it;
+
+for (it = 1; it <= nt; it++) {
+    pt = pt + it;
+    st = st + 1 * Math.pow(-1, 1 + it) / pt;
+}
+
+console.log("tổng là", st);
+
+// bài 71
+var sz = 0;
+var tz = 1;
+var mz = 0;
+var iz = 1;
+var nz = 4;
+var xz = 3;
+
+for (iz = 1; iz <= nz; iz++) {
+    tz = tz * xz;
+    mz = mz + iz;
+    sz = sz + Math.pow(-1, iz) * tz / mz;
+}
+
+console.log("tổng là", sz)
+
+// bài 72
+var sc = 1;
+var Nc = 1;
+var ic = 1;
+var xc = 2;
+var nc = 4;
+var tc;
+var Mc;
+
+for (ic = 1; ic <= nc; ic++) {
+    tc = Math.pow(xc, 2 * ic);
+  Mc = ic * 2;
+  Nc = Nc * Mc * (Mc - 1);
+  sc = sc + Math.pow(-1, ic) * tc / Nc;
+}
+
+console.log("tổng là", sc)
+
+// bài 73
+var np = 3;
+var xp = 5;
+var Sp = 1;
+var Np = 1;
+var ip = 1;
+var Tp;
+var Mp;
+
+for (ip = 1; ip <= np; ip++) {
+  Tp = Math.pow(xp, 2 * ip);
+  Mp = ip * 2;
+  Np = Np * Mp * (Mp - 1);
+  Sp = Sp + Math.pow(-1, ip) * Tp / Np;
+}
+
+console.log("tổng là", -Sp);
+
+// bài 74
+var xm = 4;
+var nm = 8;
+var Sm = 1;
+var Nm = 1;
+var im;
+var Tm;
+var Mm;
+
+for (im = 1; im <= nm; im++) {
+  Tm = Math.pow(xm, 2 * im + 1);
+  Mm = im * 2 + 1;
+  Nm = Nm * Mm * (Mm - 1);
+  Sm = Sm + Math.pow(-1, i + 1) * Tm / Nm;
+}
+
+console.log("tổng là", Sm - xm)
+
+// bài 75
+
+function isPower(num) {
+    return (num & (num - 1)) === 0;
+  }
+  
+  var numbe = 32;
+  
+  if (isPower(numbe)) {
+    console.log( numbe, ' là dạng 2^k');
+  } else {
+    console.log( numbe, ' không là dạng 2^k');
+  }
+
+//   bài 76
+function Three(num) {
+    while (num !== 0 && num % 3 === 0) {
+      num /= 3;
+    }
+    return num === 1;
+  }
+  
+  var number = 81; 
+  
+  if (Three(number)) {
+    console.log(number, ' là dạng 3^k');
+  } else {
+    console.log(number, ' không là dạng 3^k');
+  }
