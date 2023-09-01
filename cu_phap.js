@@ -545,3 +545,62 @@ function Three(num) {
   } else {
     console.log(number, ' không là dạng 3^k');
   }
+
+//   bài 77
+var ni = 12
+var si = 0;
+
+for (var ii = 1; ii <= ni; ii++) {
+  si += ii;
+}
+
+console.log("Tong cua day S(n) la: ", si);
+
+// bài 78
+function lietKe(ny) {
+    let uocSo = [];
+  
+    for (var iy = 1; iy <= ny; iy++) {
+      if (ny % iy === 0) {
+        uocSo.push(iy);
+      }
+    }
+  
+    return uocSo;
+  }
+  
+  var ny = 14;
+  var uocSo = lietKe(ny);
+  
+  console.log("Uoc so cua ", ny , " la: " , uocSo.join(", "));
+
+//   bài 79
+var no = 20
+var dem = no.toString().length;
+
+console.log("Số lượng chữ số của " , no , " là: " , dem);
+
+// bài 80
+function tinhTong(xe, ne) {
+    var se = 0;
+  
+    for (var ie = 1; ie <= ne; ie++) {
+      var nume = Math.pow(xe, ie);
+      var deno = 0;
+  
+      for (var je = 1; je <= ie; je++) {
+        deno += je;
+      }
+  
+      var term = nume / deno;
+      se += term;
+    }
+  
+    return se;
+  }
+  
+ var xe = 6
+  var ne = 8
+  var tong = tinhTong(xe, ne);
+  
+  console.log("Tổng S(n) = ", tong);
