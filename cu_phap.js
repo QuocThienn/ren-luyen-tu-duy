@@ -558,7 +558,7 @@ console.log("Tong cua day S(n) la: ", si);
 
 // bài 78
 function lietKe(ny) {
-    let uocSo = [];
+    var uocSo = [];
   
     for (var iy = 1; iy <= ny; iy++) {
       if (ny % iy === 0) {
@@ -604,3 +604,45 @@ function tinhTong(xe, ne) {
   var tong = tinhTong(xe, ne);
   
   console.log("Tổng S(n) = ", tong);
+
+//   bài 82
+function timSoLonNhat(az, bz, cz) {
+    var max = az;
+  
+    if (bz > max) {
+      max = bz;
+    }
+  
+    if (cz > max) {
+      max = cz;
+    }
+  
+    return max;
+  }
+  
+  var az = 4;
+  var bz = 2;
+  var cz = 8;
+  var max = timSoLonNhat(az, bz, cz);
+  
+  console.log("Số lớn nhất là: ", max);
+
+//   bài 83
+function check(ap, bp) {
+    if ((ap > 0 && bp > 0) || (ap < 0 && bp < 0)) {
+      return true; // Trả về true nếu cùng dấu
+    } else {
+      return false; // Trả về false nếu khác dấu
+    }
+  }
+  
+  var ap = 34;
+  var bp = 12;
+  
+  var cungDau = check(ap, bp);
+  
+  if (cungDau) {
+    console.log("Hai số có cùng dấu.");
+  } else {
+    console.log("Hai số không có cùng dấu.");
+  }
