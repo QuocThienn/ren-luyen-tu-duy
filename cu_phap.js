@@ -646,3 +646,47 @@ function check(ap, bp) {
   } else {
     console.log("Hai số không có cùng dấu.");
   }
+
+//   bài 84
+function giai(av, bv) {
+    if (av === 0) {
+      if (bv === 0) {
+        console.log("Phương trình vô số nghiệm.");
+      } else {
+        console.log("Phương trình vô nghiệm.");
+      }
+    } else {
+      var xv = -bv / av;
+      console.log(`Phương trình có nghiệm duy nhất x = `, xv);
+    }
+  }
+  
+  var av = 8
+  var bv = 4
+  
+  giai(av, bv);
+
+//   bài 85
+function xacDinh(thang) {
+    if (thang >= 1 && thang <= 3) {
+      return 1;
+    } else if (thang >= 4 && thang <= 6) {
+      return 2;
+    } else if (thang >= 7 && thang <= 9) {
+      return 3;
+    } else if (thang >= 10 && thang <= 12) {
+      return 4;
+    } else {
+      return -1;
+    }
+  }
+  
+  var thang = 10
+  
+  var quy = xacDinh(thang);
+  
+  if (quy === -1) {
+    console.log("Tháng không hợp lệ.");
+  } else {
+    console.log("Tháng", thang, "thuộc quý", quy, "trong năm.");
+  }
