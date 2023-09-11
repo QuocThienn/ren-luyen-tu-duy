@@ -690,3 +690,32 @@ function xacDinh(thang) {
   } else {
     console.log("Tháng", thang, "thuộc quý", quy, "trong năm.");
   }
+
+  // bài 86
+  function tinhTong(nu) {
+    var su = (nu * (nu + 1) / 2) ** 2;
+    return su;
+  }
+  
+  var nu = 12;
+  var tu = tinhTong(nu);
+  
+  console.log("Tổng của dãy số mũ ba từ 1 đến", nu, "là", tu);
+
+  // bài 87
+
+  function NhoNhat() {
+    var nn = 4;
+    var sn = 0;
+  
+    while (sn <= 10000) {
+      sn += nn;
+      nn++;
+    }
+  
+    return nn;
+  }
+  
+  var nn = NhoNhat();
+  
+  console.log("Số nguyên dương n nhỏ nhất sao cho 1 + 2 + ... + n > 10000 là", nn);
