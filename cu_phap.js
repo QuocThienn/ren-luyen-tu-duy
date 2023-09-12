@@ -719,3 +719,46 @@ function xacDinh(thang) {
   var nn = NhoNhat();
   
   console.log("Số nguyên dương n nhỏ nhất sao cho 1 + 2 + ... + n > 10000 là", nn);
+
+  // bài 88
+
+  for (var ir = 97; ir <= 122; ir++) {
+    var đếm = String.fromCharCode(ir);
+    console.log(đếm);
+  }
+
+  // bài 89
+
+  function tinhTong(Nx) {
+    var sx = 0;
+  
+    for (var ix = 1; ix < Nx; ix += 2) {
+      sx += ix;
+    }
+  
+    return sx;
+  }
+  
+  var Nx = 20
+  var tong = tinhTong(Nx);
+  
+  console.log("Tổng các giá trị lẻ nguyên dương nhỏ hơn", Nx, "là", tong);
+
+  // bài 90
+
+  function timM(Na) {
+    var sa = 0;
+    var ma = 1;
+  
+    while (sa < Na) {
+      sa += ma;
+      ma++;
+    }
+  
+    return ma - 1;
+  }
+  
+  var Na = 14;
+  var ma = timM(Na);
+  
+  console.log("Số nguyên dương m lớn nhất sao cho 1 + 2 + ... + m < ", Na, "là", ma);
