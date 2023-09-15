@@ -755,10 +755,87 @@ function xacDinh(thang) {
       ma++;
     }
   
-    return ma - 1;
+    return ma - 1 ;
   }
   
   var Na = 14;
   var ma = timM(Na);
   
   console.log("Số nguyên dương m lớn nhất sao cho 1 + 2 + ... + m < ", Na, "là", ma);
+
+  // bài 91
+
+  for (var yt = 1; yt < 100; yt += 2) {
+  console.log(yt);
+}
+
+// ài 92
+
+function timlon(avt, bvt) {
+  if (bvt === 0) {
+    return avt;
+  } else {
+    return timlon(bvt, avt % bvt);
+  }
+}
+
+var avt = 5
+var bvt = 8
+var uscln = timlon(avt, bvt);
+
+console.log("Ước số chung lớn nhất của", avt, "và", bvt, "là", uscln);
+
+// bài 93
+
+function kiemTra(nsb) {
+  if (nsb < 2) {
+    return false;
+  }
+
+  for (var isb = 2; isb <= Math.sqrt(nsb); isb++) {
+    if (nsb % isb === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+var bsb = 10;
+var asb = kiemTra(bsb);
+
+if (asb) {
+  console.log(bsb, "là số nguyên tố.");
+} else {
+  console.log(bsb, "không phải là số nguyên tố.");
+}
+
+// bài 94
+
+for (var qe = 1; qe < 100; qe += 2) {
+  if (qe !== 5 && qe !== 7 && qe !== 93) {
+    console.log(qe);
+  }
+}
+
+// bài 95
+
+var acv = -12;
+var bcv = -31;
+var ccv = -50;
+
+if (acv < 0) {
+  acv = Math.abs(acv);
+}
+
+if (bcv < 0) {
+  bcv = Math.abs(bcv);
+}
+
+if (ccv < 0) {
+  ccv = Math.abs(ccv);
+}
+
+console.log("Số thực thứ nhất:", acv);
+console.log("Số thực thứ hai:", bcv);
+console.log("Số thực thứ ba:", ccv);
