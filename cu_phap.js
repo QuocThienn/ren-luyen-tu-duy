@@ -839,3 +839,73 @@ if (ccv < 0) {
 console.log("Số thực thứ nhất:", acv);
 console.log("Số thực thứ hai:", bcv);
 console.log("Số thực thứ ba:", ccv);
+
+// bài 96
+function bai96(xsu) {
+  if (xsu >= 5) {
+    return 2 * Math.pow(xsu, 2) + 5 * xsu + 9;
+  } else {
+    return -2 * Math.pow(xsu, 2) + 4 * xsu - 9;
+  }
+}
+
+var xsu = 45;
+var kq = bai96(xsu);
+
+console.log("Giá trị của hàm số là:", kq);
+
+
+// bài 97
+
+function check(abc, bac, cad) {
+  if (abc <= 0 || bac <= 0 || cad <= 0) {
+    return "Không phải tam giác";
+  } else if (abc + bac <= cad || abc + cad <= bac || bac + cad <= abc) {
+    return "Không phải tam giác";
+  } else if (abc === bac && bac === cad) {
+    return "Tam giác đều";
+  } else if (abc === bac || abc === cad || bac === cad) {
+    return "Tam giác cân";
+  } else if (abc * abc + bac * bac === cad * cad || abc * abc + cad * cad === bac * bac || bac * bac + cad * cad === abc * abc) {
+    return "Tam giác vuông";
+  } else {
+    return "Tam giác thường";
+  }
+}
+
+var abc = 3;
+var bac = 4;
+var cad = 3;
+
+var loai = check(abc, bac, cad);
+
+console.log("Đây là tam giác:", loai);
+
+// bài 98
+
+function giaihe(ayt, byt, cyt, dyt, eyt, fyt) {
+  var gyt = ayt * eyt - byt * dyt;
+
+  if (gyt === 0) {
+    if (cyt / ayt === fyt / dyt) {
+      return "Hệ phương trình có vô số nghiệm";
+    } else {
+      return "Hệ phương trình vô nghiệm";
+    }
+  } else {
+    var xyt = (cyt * eyt - byt * fyt) / gyt;
+    var yyt = (ayt * fyt - cyt * dyt) / gyt;
+    return "Nghiệm của hệ phương trình là x = " + xyt + ", y = " + yyt;
+  }
+}
+
+var ayt = 4;
+var byt = 7;
+var cyt = 3 ;
+var dyt = 12;
+var eyt = 4;
+var fyt = 3;
+
+var ketQua = giaihe(ayt, byt, cyt, dyt, eyt, fyt);
+
+console.log(ketQua);
