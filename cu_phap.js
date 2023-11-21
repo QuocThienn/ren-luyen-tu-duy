@@ -909,3 +909,234 @@ var fyt = 3;
 var ketQua = giaihe(ayt, byt, cyt, dyt, eyt, fyt);
 
 console.log(ketQua);
+
+//bài 99
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('Nhập a: ', (a) => {
+  rl.question('Nhập b: ', (b) => {
+    rl.question('Nhập c: ', (c) => {
+      a = parseInt(a);
+      b = parseInt(b);
+      c = parseInt(c);
+
+      let temp;
+
+      if (a > b) {
+        temp = a;
+        a = b;
+        b = temp;
+      }
+      if (a > c) {
+        temp = a;
+        a = c;
+        c = temp;
+      }
+      if (b > c) {
+        temp = b;
+        b = c;
+        c = temp;
+      }
+
+      console.log('Tăng dần:', a, b, c);
+
+      rl.close();
+    });
+  });
+});
+
+// 100
+const input = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+input.question('Nhập a: ', (a) => {
+  input.question('Nhập b: ', (b) => {
+    input.question('Nhập c: ', (c) => {
+      a = parseFloat(a);
+      b = parseFloat(b);
+      c = parseFloat(c);
+
+      if (a === 0) {
+        if (b === 0) {
+          if (c === 0) {
+            console.log('Phương trình có vô số nghiệm');
+          } else {
+            console.log('Phương trình vô nghiệm');
+          }
+        } else {
+          let x = -c / b;
+          console.log('Phương trình có nghiệm duy nhất x =', x);
+        }
+      } else {
+        let delta = b * b - 4 * a * c;
+
+        if (delta < 0) {
+          console.log('Phương trình vô nghiệm');
+        } else if (delta === 0) {
+          let x = -b / (2 * a);
+          console.log('Phương trình có nghiệm kép x1 = x2 =', x);
+        } else {
+          let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+          let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+          console.log('Phương trình có 2 nghiệm phân biệt:');
+          console.log('x1 =', x1);
+          console.log('x2 =', x2);
+        }
+      }
+
+      input.close();
+    });
+  });
+});
+
+// 101
+const minYear = 1900;
+const maxYear = 10000;
+
+function KiemTraNamNhuan(nam) {
+  return (nam % 4 === 0 && nam % 100 !== 0) || nam % 400 === 0;
+}
+
+function TimSoNgayTrongThang(thang, nam) {
+  switch (thang) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      console.log('Có 31 ngày');
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      console.log('Có 30 ngày');
+      break;
+    case 2:
+      let check = KiemTraNamNhuan(nam);
+      if (check) {
+        console.log('Có 29 ngày');
+      } else {
+        console.log('Có 28 ngày');
+      }
+      break;
+    default:
+      console.log('Tháng không hợp lệ');
+  }
+}
+
+const inputInterface = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+inputInterface.question('Nhập vào tháng: ', (thang) => {
+  thang = parseInt(thang);
+
+  if (thang < 1 || thang > 12) {
+    console.log('Dữ liệu tháng không hợp lệ. Xin kiểm tra lại!');
+    inputInterface.close();
+    return;
+  }
+
+  inputInterface.question('Nhập vào năm: ', (nam) => {
+    nam = parseInt(nam);
+
+    if (nam < minYear || nam > maxYear) {
+      console.log('Dữ liệu năm không hợp lệ. Xin kiểm tra lại!');
+      inputInterface.close();
+      return;
+    }
+
+    TimSoNgayTrongThang(thang, nam);
+
+    inputInterface.close();
+  });
+});
+
+//102
+const MIN_YEAR = 1900;
+const MAX_YEAR = 10000;
+
+function isLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
+
+function getDaysInMonth(month, year) {
+    let daysInMonth;
+    switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            daysInMonth = 31;
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            daysInMonth = 30;
+            break;
+        case 2:
+            let isLeap = isLeapYear(year);
+            daysInMonth = isLeap ? 29 : 28;
+            break;
+    }
+    return daysInMonth;
+}
+
+function getNextDate(day, month, year) {
+    let daysInMonth = getDaysInMonth(month, year);
+    if (day < daysInMonth) {
+        day++; // Increase the day
+    } else if (month < 12) {
+        day = 1;
+        month++; // Next day is the start of the next month
+    } else {
+        day = month = 1;
+        year++; // Next day is the start of the new year (month = 1, day = 1)
+    }
+    console.log(`Ngay ke tiep la: ${day} - ${month} - ${year}`);
+}
+
+function main() {
+    let day, month, year;
+
+    do {
+        year = 2022;
+        if (year < MIN_YEAR || year > MAX_YEAR) {
+            console.log("Du lieu nam khong hop le. Xin kiem tra lai!");
+        }
+    } while (year < MIN_YEAR || year > MAX_YEAR);
+
+    do {
+        month = 10;
+        if (month < 1 || month > 12) {
+            console.log("Du lieu thang khong hop le. Xin kiem tra lai!");
+        }
+    } while (month < 1 || month > 12);
+
+    let daysInMonth = getDaysInMonth(month, year);
+    do {
+        day = 21;
+        if (day < 1 || day > daysInMonth) {
+            console.log("Du lieu ngay khong hop le. Xin kiem tra lai!");
+        }
+    } while (day < 1 || day > daysInMonth);
+
+    getNextDate(day, month, year);
+}
+
+main();
